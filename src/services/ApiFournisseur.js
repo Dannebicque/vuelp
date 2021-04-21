@@ -17,4 +17,9 @@ async function postFournisseur(data)
   return await axios.post(BASE_URL, data);
 }
 
-export {getFournisseurs, getFournisseur, postFournisseur}
+async function putFournisseur(id, data)
+{
+  return await axios.put(BASE_URL+'/'+id, data);
+}
+
+export {getFournisseurs, getFournisseur, postFournisseur, putFournisseur}

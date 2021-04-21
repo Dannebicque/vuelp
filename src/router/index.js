@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Articles from '../views/Articles.vue'
 import Fournisseurs from '../views/Fournisseurs'
 import AddFournisseur from '../views/AddFournisseur'
+import EditFournisseur from '../views/EditFournisseur'
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,11 @@ const routes = [
     path: '/fournisseurs/add',
     name: 'AddFournisseur',
     component: AddFournisseur
+  },
+  {
+    path: '/fournisseurs/edit/:id',
+    name: 'EditFournisseur',
+    component: EditFournisseur
   },
   {
     path: '/about',

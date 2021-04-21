@@ -2,19 +2,20 @@
   <div>
     <h1>Fournisseurs</h1>
     <router-link :to="{name: 'AddFournisseur'}">Ajouter un fournisseur</router-link>
-
-    <ul>
-      <li v-for="fournisseur in fournisseurs" :key="fournisseur.id">{{fournisseur.nom}}</li>
-    </ul>
+    <div>
+    <Fournisseur v-for="fournisseur in fournisseurs" :key="fournisseur.id" :fournisseur="fournisseur"></Fournisseur>
+    </div>
   </div>
 </template>
 
 <script>
 
 import { getFournisseurs } from '../services/ApiFournisseur'
+import Fournisseur from '../components/Fournisseur'
 
 export default {
   name: 'Fournisseurs',
+  components: {Fournisseur},
   data () {
     return {
       fournisseurs: {}

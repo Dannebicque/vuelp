@@ -5,6 +5,7 @@ import Articles from '../views/Articles.vue'
 import Fournisseurs from '../views/Fournisseurs'
 import AddFournisseur from '../views/AddFournisseur'
 import EditFournisseur from '../views/EditFournisseur'
+import Login from '../views/Login'
 
 Vue.use(VueRouter)
 
@@ -13,6 +14,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login
   },
   {
     path: '/articles',

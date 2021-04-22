@@ -1,8 +1,8 @@
 <template>
   <div class="about">
     <h1>Connexion</h1>
-    <input-text name="username" label="Login" required></input-text>
-    <input-text name="password" label="password" required></input-text>
+    <input-text name="username" label="Login" required v-model="username"></input-text>
+    <input-text name="password" label="password" required v-model="password"></input-text>
     <button @click="loginCheck">Connexion</button>
 
   </div>
@@ -26,6 +26,7 @@ export default {
         password: this.password
       }).then( response => {
         console.log(response.data)
+        localStorage.token = response.data.token
       })
     }
   }
